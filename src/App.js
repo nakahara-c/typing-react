@@ -32,7 +32,6 @@ const App = () => {
     }
   }, [isGameActive, getRandomWord]);
 
-
   useEffect(() => {
     if (timer === 0) {
       setIsGameActive(false);
