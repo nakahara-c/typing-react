@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useRef, useCallback, useMemo, ReactDOM } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const App = () => {
   const [word, setWord] = useState("");
@@ -67,7 +69,7 @@ const App = () => {
     <div className="container">
       <h1>タイピングゲーム</h1>
       {!isGameActive ? (
-        <button onClick={handleGameStart}>ゲームスタート</button>
+        <button className="btn btn-primary" onClick={handleGameStart}>ゲームスタート</button>
       ) : (
         <button onClick={handleGameReset}>リセット</button>
       )}
